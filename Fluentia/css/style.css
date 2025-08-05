@@ -1,0 +1,183 @@
+/*header {
+  display: flex;   
+  margin-top: 30px;
+  margin-left: 10px;
+  white-space: nowrap;
+  align-items: center;
+}  */
+
+header {
+  display: flex;   
+  align-items: center;
+  justify-content: space-between; /* separa logo, nav e extras */
+  padding: 10px 25px; /* respiro lateral */
+  white-space: nowrap;
+}
+
+.topo{
+  display: flex; /*flexibilização dos itens*/
+  align-items: center; /*alinhamento vertical*/
+  gap: 5px;
+  margin-left: -35px;
+}
+
+.icone {
+  width: 35px; /*proporção do elemento*/
+  margin-left: 20px;
+}
+
+h1{
+  font-family:'Righteous'; /*referenciação da fonte*/
+  width: 40px; 
+  color: #373847;
+  letter-spacing: 0.1px; /*espaçamento entre letras*/
+  font-weight: 400; /*garantir a padronização do tamanho*/
+}
+
+nav{
+  flex: 1;
+  display: flex;
+  justify-content: center; /*separa .topo (icone + logo) e nav (links) */
+  /*margin-left: 270px;*/
+}
+
+nav ul{
+  font-family:'Roboto';
+  font-weight: bold; /*negrito*/
+  font-size: 17px;
+  display: flex;
+  gap: 130px; /*espaçamento entre os links*/
+  list-style: none; /*tira os pts de lista*/
+  margin: 0;
+  /*margin-top: 39px;*/
+  padding-left: 80px;;
+}
+
+nav ul li a{
+  text-decoration: none; /*sem sublinhado*/
+  color: #373847;
+}
+
+nav ul li a:hover {
+  text-decoration: underline; /*sublinhado ao passar o mouse*/
+  color: #808080;
+}
+
+.direita{
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+}
+
+.criar{
+ display: flex;
+ align-items: center;
+}
+
+.criar a {
+ font-family: 'roboto';
+ font-style: italic;
+ font-size: 14px;
+ text-decoration: none;
+ color: white;
+ background-color: #343232;
+ padding: 6px 16px;
+ border-radius: 100px;
+}
+
+.criar a:hover{
+  color: rgb(209, 206, 206);
+}
+
+.login{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.avatar{
+  width: 40px;
+  height: 41px;
+}
+
+.login a {
+  font-family: 'Roboto';
+  font-size: 14px;
+  color: rgb(0, 0, 0);
+  padding: 1px 14px;
+  text-decoration: none;
+  background-color: transparent;
+  border: 1px solid #000;
+  border-radius: 100px;
+}
+
+.login a:hover{
+  color:rgb(121, 121, 121);
+}
+
+.banner {
+  display: flex;
+  align-items: center;  /* faz as divs dentro esticarem */
+  justify-content: space-between;
+  background-color: #D4D4D4; 
+  height: 580px; /* define a altura do hero */
+  z-index: 2;
+  gap: 580px;
+}
+
+.txt-banner{
+  margin-left: 90px;
+}
+
+.txt-banner h2{
+  font-family: 'Inter Tight';
+  color: #1D1D1D;
+  font-size: 55px;
+  font-weight: 410;
+}
+
+.txt-banner p{
+  font-family: 'Hind';
+  font-weight: 300;
+  font-size: 24px;
+}
+
+.txt-banner a{
+  font-family: 'Hind';
+  font-weight: 20;
+  text-decoration: none;
+  color: white;
+  padding: 8px 12px;
+  background-color: #343232;
+  border-radius: 100px;
+}
+
+.txt-banner a:hover{
+  color:#808080;
+}
+
+.img-banner{
+  height: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0;
+}
+
+.img-banner img {
+  height: 100%;      /* imagem ocupa toda a altura da section */
+  width: auto;       /* mantém a proporção */
+  object-fit: cover; /* corta o excesso, sem distorcer */
+}
+
+.carrossel img{
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
