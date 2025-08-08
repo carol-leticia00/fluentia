@@ -267,6 +267,80 @@ nav ul li a:hover {
   text-align: center;
 }
 
+/* Telas grandes (computadores) - já está padrão */
+
+/* Tablets (até 1024px) */
+@media (max-width: 1024px) {
+  nav ul {
+    gap: 60px; /* diminui espaço entre os links */
+    font-size: 15px;
+  }
+
+  .txt-banner h2 {
+    font-size: 42px; /* título menor */
+  }
+
+  .txt-banner p {
+    font-size: 20px;
+  }
+
+  .img-banner img {
+    max-width: 400px;
+  }
+}
+
+/* Celulares (até 768px) */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column; /* logo, menu e login empilham */
+    gap: 10px;
+  }
+
+  nav ul {
+    flex-direction: column; /* links um abaixo do outro */
+    gap: 15px;
+    padding: 0;
+  }
+
+  .banner {
+    flex-direction: column-reverse; /* imagem abaixo do texto */
+    height: auto;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .txt-banner {
+    margin-left: 0;
+  }
+
+  .txt-banner h2 {
+    font-size: 28px;
+  }
+
+  .txt-banner p {
+    font-size: 18px;
+  }
+
+  .img-banner img {
+    width: 100%;
+    height: auto;
+  }
+
+  .carrossel {
+    flex-direction: column;
+    margin-top: 100px;
+    text-align: center;
+  }
+
+  .slides {
+    flex-direction: column;
+  }
+
+  .slogan-carrossel {
+    margin-right: 0;
+  }
+}
+
 body {
   margin: 0;
   padding: 0;
