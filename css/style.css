@@ -267,17 +267,16 @@ nav ul li a:hover {
   text-align: center;
 }
 
-/* Telas grandes (computadores) - já está padrão */
-
 /* Tablets (até 1024px) */
 @media (max-width: 1024px) {
   nav ul {
-    gap: 60px; /* diminui espaço entre os links */
+    gap: 60px;
     font-size: 15px;
+    padding-left: 40px;
   }
 
   .txt-banner h2 {
-    font-size: 42px; /* título menor */
+    font-size: 42px;
   }
 
   .txt-banner p {
@@ -287,25 +286,53 @@ nav ul li a:hover {
   .img-banner img {
     max-width: 400px;
   }
+
+  .carrossel-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .slogan-carrossel {
+    margin-right: 50px;
+  }
+
+  .itens {
+    gap: 100px;
+    margin: 50px 30px;
+  }
+
+  .item-bolinha img.topicos {
+    width: 80px;
+  }
+
+  .item-bolinha p.descricao {
+    font-size: 14px;
+  }
 }
 
 /* Celulares (até 768px) */
 @media (max-width: 768px) {
   header {
-    flex-direction: column; /* logo, menu e login empilham */
-    gap: 10px;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px 20px;
   }
 
   nav ul {
-    flex-direction: column; /* links um abaixo do outro */
+    flex-direction: column;
     gap: 15px;
     padding: 0;
+    margin: 0;
+  }
+
+  nav ul li {
+    text-align: center;
   }
 
   .banner {
-    flex-direction: column-reverse; /* imagem abaixo do texto */
+    flex-direction: column-reverse;
     height: auto;
-    padding: 20px;
+    padding: 20px 10px;
     text-align: center;
   }
 
@@ -321,6 +348,11 @@ nav ul li a:hover {
     font-size: 18px;
   }
 
+  .txt-banner a {
+    font-size: 14px;
+    padding: 8px 20px;
+  }
+
   .img-banner img {
     width: 100%;
     height: auto;
@@ -328,8 +360,13 @@ nav ul li a:hover {
 
   .carrossel {
     flex-direction: column;
-    margin-top: 100px;
+    margin-top: 50px;
     text-align: center;
+  }
+
+  .carrossel-container {
+    width: 100%;
+    height: auto;
   }
 
   .slides {
@@ -338,6 +375,38 @@ nav ul li a:hover {
 
   .slogan-carrossel {
     margin-right: 0;
+    margin-top: 20px;
+  }
+
+  .slogan-carrossel h2 {
+    font-size: 20px;
+  }
+
+  .subtitulo {
+    font-size: 16px;
+  }
+
+  .itens {
+    flex-direction: column;
+    gap: 40px;
+    margin: 40px 10px;
+  }
+
+  .item-bolinha {
+    max-width: 150px;
+    margin: 0 auto;
+  }
+
+  .item-bolinha img.topicos {
+    width: 60px;
+  }
+
+  .item-bolinha p.descricao {
+    font-size: 12px;
+  }
+
+  .direita {
+    gap: 15px;
   }
 }
 
