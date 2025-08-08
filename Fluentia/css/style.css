@@ -1,17 +1,16 @@
-/*header {
-  display: flex;   
-  margin-top: 30px;
-  margin-left: 10px;
-  white-space: nowrap;
-  align-items: center;
-}  */
+/* ==========================
+   HEADER
+========================== */
 
 header {
   display: flex;   
   align-items: center;
   justify-content: space-between; /* separa logo, nav e extras */
-  padding: 10px 25px; /* respiro lateral */
+  /*padding: 10px 25px; /* respiro lateral */
   white-space: nowrap;
+  margin-top: auto;
+  margin-left: 25px;
+  margin-right: 20px;
 }
 
 .topo{
@@ -38,7 +37,6 @@ nav{
   flex: 1;
   display: flex;
   justify-content: center; /*separa .topo (icone + logo) e nav (links) */
-  /*margin-left: 270px;*/
 }
 
 nav ul{
@@ -49,7 +47,6 @@ nav ul{
   gap: 130px; /*espaçamento entre os links*/
   list-style: none; /*tira os pts de lista*/
   margin: 0;
-  /*margin-top: 39px;*/
   padding-left: 80px;;
 }
 
@@ -60,7 +57,7 @@ nav ul li a{
 
 nav ul li a:hover {
   text-decoration: underline; /*sublinhado ao passar o mouse*/
-  color: #808080;
+  opacity: 50%;
 }
 
 .direita{
@@ -87,6 +84,7 @@ nav ul li a:hover {
 
 .criar a:hover{
   color: rgb(209, 206, 206);
+  opacity: 60%;
 }
 
 .login{
@@ -97,13 +95,13 @@ nav ul li a:hover {
 }
 
 .avatar{
-  width: 40px;
-  height: 41px;
+  width: 37px;
+  height: 38px;
 }
 
 .login a {
   font-family: 'Roboto';
-  font-size: 14px;
+  font-size: 12px;
   color: rgb(0, 0, 0);
   padding: 1px 14px;
   text-decoration: none;
@@ -114,7 +112,12 @@ nav ul li a:hover {
 
 .login a:hover{
   color:rgb(121, 121, 121);
+  opacity: 60%;
 }
+
+/* ==========================
+   BANNER
+========================== */
 
 .banner {
   display: flex;
@@ -123,24 +126,26 @@ nav ul li a:hover {
   background-color: #D4D4D4; 
   height: 580px; /* define a altura do hero */
   z-index: 2;
-  gap: 580px;
+
 }
 
 .txt-banner{
-  margin-left: 90px;
+  margin-left: 120px;
 }
 
 .txt-banner h2{
   font-family: 'Inter Tight';
   color: #1D1D1D;
-  font-size: 55px;
+  font-size: 58px;
   font-weight: 410;
+ 
 }
 
 .txt-banner p{
   font-family: 'Hind';
   font-weight: 300;
-  font-size: 24px;
+  font-size: 27px;
+ 
 }
 
 .txt-banner a{
@@ -155,6 +160,7 @@ nav ul li a:hover {
 
 .txt-banner a:hover{
   color:#808080;
+  opacity: 70%;
 }
 
 .img-banner{
@@ -171,9 +177,136 @@ nav ul li a:hover {
   object-fit: cover; /* corta o excesso, sem distorcer */
 }
 
-.carrossel img{
-  width: 100%;
+/* ==========================
+   MAIN
+========================== */
+
+.carrossel{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 100px;
 }
+
+.carrossel-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  overflow: hidden;
+  width: 700px;
+  height: 350px;
+}
+
+.textura{
+  width: 100%;
+  position: absolute;
+  z-index: -1; /*textura no fundo, imagens sobrepostas*/
+}
+
+.slides{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.slide {
+  opacity: 0.3;
+  filter: blur(2px);
+  transform: scale(0.9);
+}
+
+.carrossel h2 {
+  font-family: 'Inter tight';
+  font-size: 25px;
+  font-style: italic;
+  font-weight: 480;
+  color: white;
+  width: 30;
+  background-color: #615E5E;
+  border-radius: 8px;
+}
+
+.slogan-carrossel{
+  flex-direction: column;
+  display: flex;
+  text-align: center;
+  margin-right: 210px;
+}
+
+.subtitulo{
+  font-family: 'Roboto';
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-weight: 350;
+  font-size: 21px;
+}
+
+.seções {
+  display: flex;
+  align-items: center;  /* faz as divs dentro esticarem */
+  justify-content: space-between;
+  background-color: #B7B7B7; 
+  height: 120px; /* define a altura do hero */
+  margin-top: 140px;;
+  z-index: 2;
+}
+
+/* Celulares (até 768px) */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column; /* logo, menu e login empilham */
+    gap: 10px;
+  }
+
+  nav ul {
+    flex-direction: column; /* links um abaixo do outro */
+    gap: 15px;
+    padding: 0;
+  }
+
+  .banner {
+    flex-direction: column-reverse; /* imagem abaixo do texto */
+    height: auto;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .txt-banner {
+    margin-left: 0;
+  }
+
+  .txt-banner h2 {
+    font-size: 28px;
+  }
+
+  .txt-banner p {
+    font-size: 18px;
+  }
+
+  .img-banner img {
+    width: 100%;
+    height: auto;
+  }
+
+  .carrossel {
+    flex-direction: column;
+    margin-top: 100px;
+    text-align: center;
+  }
+
+  .slides {
+    flex-direction: column;
+  }
+
+  .slogan-carrossel {
+    margin-right: 0;
+  }
+}
+
 
 body {
   margin: 0;
